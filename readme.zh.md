@@ -101,6 +101,20 @@ spring.boot.admin.client.instance.service-base-url=http://127.0.0.1:9003  # 服�
 - **线程转储** — 在线捕获和分析 JVM 线程 Dump
 - **通知告警** — 服务状态变更时触发通知（离线/恢复）
 
+## 界面预览
+
+### 应用总览
+
+![应用总览](images/bytedesk-monitor-apps.png)
+
+### 应用详情
+
+![应用详情](images/bytedesk-monitor-detail.png)
+
+### 事件日志
+
+![事件日志](images/bytedesk-monitor-journal.png)
+
 ## 相关链接
 
 - [Spring Boot Admin 官方文档](https://docs.spring-boot-admin.com/current/getting-started.html)

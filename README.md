@@ -101,6 +101,20 @@ spring.boot.admin.client.instance.service-base-url=http://127.0.0.1:9003
 - **Thread Dump** — capture and analyze JVM thread dumps
 - **Notifications** — alerts on status changes (offline/online)
 
+## Screenshots
+
+### Applications Overview
+
+![Applications Overview](images/bytedesk-monitor-apps.png)
+
+### Application Detail
+
+![Application Detail](images/bytedesk-monitor-detail.png)
+
+### Event Journal
+
+![Event Journal](images/bytedesk-monitor-journal.png)
+
 ## Related Links
 
 - [Spring Boot Admin Docs](https://docs.spring-boot-admin.com/current/getting-started.html)
