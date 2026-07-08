@@ -4,6 +4,8 @@
 
 **语言 / Language:** [中文](readme.zh.md) | [English](README.md)
 
+> **代码仓库:** [GitHub](https://github.com/Bytedesk/bytedesk-monitor) | [Gitee](https://gitee.com/bytedesk/bytedesk-monitor)
+
 ## 概述
 
 bytedesk-monitor 是一个独立的监控服务，提供统一的健康检查、指标采集、日志查看和环境信息浏览功能，可集中管理所有已注册的 Bytedesk Spring Boot 应用。

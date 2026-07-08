@@ -4,6 +4,8 @@ Spring Boot Admin Server for monitoring [Bytedesk](https://github.com/Bytedesk/b
 
 **Language:** [English](README.md) | [中文](readme.zh.md)
 
+> **Mirror:** [GitHub](https://github.com/Bytedesk/bytedesk-monitor) | [Gitee](https://gitee.com/bytedesk/bytedesk-monitor)
+
 ## Overview
 
 bytedesk-monitor is a dedicated monitoring dashboard built on **Spring Boot Admin Server**. It provides centralized health checks, metrics, log viewing, and environment inspection for all registered Bytedesk Spring Boot applications.
