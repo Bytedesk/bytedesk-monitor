@@ -59,6 +59,13 @@ JASYPT_ENCRYPTOR_PASSWORD=<your-password> ./starter/mvnw -f starter/pom.xml spri
 
 Visit [http://127.0.0.1:9103](http://127.0.0.1:9103) in your browser.
 
+| Field    | Default Value |
+| -------- | ------------- |
+| Username | `admin`       |
+| Password | `admin`       |
+
+> ⚠️ **Production**: Override defaults via `SPRING_SECURITY_USER_NAME` / `SPRING_SECURITY_USER_PASSWORD` environment variables.
+
 ## Configuration
 
 ### Server (`application.properties`)
@@ -69,12 +76,18 @@ spring.boot.admin.ui.title=Bytedesk Monitor
 spring.boot.admin.monitor.status-interval=10000ms
 spring.boot.admin.monitor.status-lifetime=60000ms
 spring.boot.admin.monitor.default-timeout=10000ms
+
+# Security — Admin UI login credentials
+spring.security.user.name=admin
+spring.security.user.password=admin
 ```
 
 ### Client (in bytedesk-starter)
 
 ```properties
 spring.boot.admin.client.url=http://127.0.0.1:9103
+spring.boot.admin.client.username=admin
+spring.boot.admin.client.password=admin
 spring.boot.admin.client.instance.name=bytedesk-starter
 spring.boot.admin.client.instance.service-base-url=http://127.0.0.1:9003
 ```

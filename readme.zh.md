@@ -57,7 +57,14 @@ JASYPT_ENCRYPTOR_PASSWORD=<your-password> ./starter/mvnw -f starter/pom.xml spri
 
 ### 3. 打开监控面板
 
-浏览器访问 [http://127.0.0.1:9103](http://127.0.0.1:9103)。
+浏览器访问 [http://127.0.0.1:9103](http://127.0.0.1:9103)，登录凭据：
+
+| 字段   | 默认值    |
+| ------ | --------- |
+| 用户名 | `admin`   |
+| 密码   | `admin`   |
+
+> ⚠️ **生产环境**：请通过环境变量 `SPRING_SECURITY_USER_NAME` / `SPRING_SECURITY_USER_PASSWORD` 覆盖默认凭据。
 
 ## 配置说明
 
@@ -69,12 +76,18 @@ spring.boot.admin.ui.title=Bytedesk Monitor
 spring.boot.admin.monitor.status-interval=10000ms       # 健康检查间隔
 spring.boot.admin.monitor.status-lifetime=60000ms       # 状态缓存有效期
 spring.boot.admin.monitor.default-timeout=10000ms       # 请求超时
+
+# 安全认证 — Admin UI 登录凭据
+spring.security.user.name=admin
+spring.security.user.password=admin
 ```
 
 ### 客户端（bytedesk-starter 中）
 
 ```properties
 spring.boot.admin.client.url=http://127.0.0.1:9103              # Monitor Server 地址
+spring.boot.admin.client.username=admin                          # 注册认证用户名
+spring.boot.admin.client.password=admin                          # 注册认证密码
 spring.boot.admin.client.instance.name=bytedesk-starter          # 实例名称
 spring.boot.admin.client.instance.service-base-url=http://127.0.0.1:9003  # 服务地址
 ```
