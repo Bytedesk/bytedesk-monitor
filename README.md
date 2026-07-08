@@ -2,7 +2,7 @@
 
 Spring Boot Admin Server for monitoring [Bytedesk](https://github.com/Bytedesk/bytedesk) services.
 
-**Language:** [English](README.md) | [中文](README.zh.md)
+**Language:** [English](README.md) | [中文](readme.zh.md)
 
 ## Overview
 

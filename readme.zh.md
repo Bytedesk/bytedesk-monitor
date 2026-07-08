@@ -2,7 +2,7 @@
 
 基于 **Spring Boot Admin Server** 的 [Bytedesk](https://github.com/Bytedesk/bytedesk) 服务监控面板。
 
-**语言 / Language:** [中文](README.zh.md) | [English](README.md)
+**语言 / Language:** [中文](readme.zh.md) | [English](README.md)
 
 ## 概述
 
