@@ -95,6 +95,24 @@ spring.boot.admin.client.instance.name=bytedesk-starter          # 实例名称
 spring.boot.admin.client.instance.service-base-url=http://127.0.0.1:9003  # 服务地址
 ```
 
+### 邮件通知（`application-open.properties`）
+
+对外开放或生产环境建议通过环境变量注入 SMTP 凭据和通知收件人，避免将敏感信息直接写入配置文件。
+
+```properties
+spring.mail.host=${SPRING_MAIL_HOST:smtp.qiye.aliyun.com}
+spring.mail.port=${SPRING_MAIL_PORT:465}
+spring.mail.username=${SPRING_MAIL_USERNAME:support@example.com}
+spring.mail.password=${SPRING_MAIL_PASSWORD:}
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.ssl.enable=true
+spring.mail.properties.mail.smtp.ssl.trust=${SPRING_MAIL_SMTP_SSL_TRUST:smtp.qiye.aliyun.com}
+
+spring.boot.admin.notify.mail.enabled=true
+spring.boot.admin.notify.mail.to=${SPRING_BOOT_ADMIN_NOTIFY_MAIL_TO:demo@example.com}
+spring.boot.admin.notify.mail.from=${SPRING_BOOT_ADMIN_NOTIFY_MAIL_FROM:Bytedesk Monitor <support@example.com>}
+```
+
 ## 功能特性
 
 - **健康面板** — 实时查看所有注册服务的上下线状态
@@ -108,15 +126,25 @@ spring.boot.admin.client.instance.service-base-url=http://127.0.0.1:9003  # 服�
 
 ### 应用总览
 
-![应用总览](images/bytedesk-monitor-apps.png)
+![应用总览](/img/monitor/bytedesk-monitor-apps.png)
 
 ### 应用详情
 
-![应用详情](images/bytedesk-monitor-detail.png)
+![应用详情](/img/monitor/bytedesk-monitor-detail.png)
 
 ### 事件日志
 
-![事件日志](images/bytedesk-monitor-journal.png)
+![事件日志](/img/monitor/bytedesk-monitor-journal.png)
+
+![事件logs](/img/monitor/bytedesk-monitor-logs.png)
+
+## 定时任务
+
+![定时任务](/img/monitor/bytedesk-monitor-quartz.png)
+
+## 线程转储threaddump
+
+![线程转储](/img/monitor/bytedesk-monitor-threaddump.png)
 
 ## 相关链接
 

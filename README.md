@@ -95,6 +95,24 @@ spring.boot.admin.client.instance.name=bytedesk-starter
 spring.boot.admin.client.instance.service-base-url=http://127.0.0.1:9003
 ```
 
+### Mail Notifications (`application-open.properties`)
+
+Use environment variables for SMTP credentials and recipients in public or production deployments.
+
+```properties
+spring.mail.host=${SPRING_MAIL_HOST:smtp.qiye.aliyun.com}
+spring.mail.port=${SPRING_MAIL_PORT:465}
+spring.mail.username=${SPRING_MAIL_USERNAME:support@example.com}
+spring.mail.password=${SPRING_MAIL_PASSWORD:}
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.ssl.enable=true
+spring.mail.properties.mail.smtp.ssl.trust=${SPRING_MAIL_SMTP_SSL_TRUST:smtp.qiye.aliyun.com}
+
+spring.boot.admin.notify.mail.enabled=true
+spring.boot.admin.notify.mail.to=${SPRING_BOOT_ADMIN_NOTIFY_MAIL_TO:demo@example.com}
+spring.boot.admin.notify.mail.from=${SPRING_BOOT_ADMIN_NOTIFY_MAIL_FROM:Bytedesk Monitor <support@example.com>}
+```
+
 ## Features
 
 - **Health Dashboard** — live status of all registered services
@@ -117,6 +135,16 @@ spring.boot.admin.client.instance.service-base-url=http://127.0.0.1:9003
 ### Event Journal
 
 ![Event Journal](images/bytedesk-monitor-journal.png)
+
+![Event logs](/img/monitor/bytedesk-monitor-logs.png)
+
+## Quartz Task
+
+![Quartz Task](/img/monitor/bytedesk-monitor-quartz.png)
+
+## Thread Dump
+
+![Thread Dump](/img/monitor/bytedesk-monitor-threaddump.png)
 
 ## Related Links
 
