@@ -136,15 +136,15 @@ spring.boot.admin.notify.mail.from=${SPRING_BOOT_ADMIN_NOTIFY_MAIL_FROM:Bytedesk
 
 ![Event Journal](images/bytedesk-monitor-journal.png)
 
-![Event logs](/img/monitor/bytedesk-monitor-logs.png)
+![Event logs](images/bytedesk-monitor-logs.png)
 
 ## Quartz Task
 
-![Quartz Task](/img/monitor/bytedesk-monitor-quartz.png)
+![Quartz Task](images/bytedesk-monitor-quartz.png)
 
 ## Thread Dump
 
-![Thread Dump](/img/monitor/bytedesk-monitor-threaddump.png)
+![Thread Dump](images/bytedesk-monitor-threaddump.png)
 
 ## Related Links
 

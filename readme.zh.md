@@ -126,25 +126,25 @@ spring.boot.admin.notify.mail.from=${SPRING_BOOT_ADMIN_NOTIFY_MAIL_FROM:Bytedesk
 
 ### 应用总览
 
-![应用总览](/img/monitor/bytedesk-monitor-apps.png)
+![应用总览](images/bytedesk-monitor-apps.png)
 
 ### 应用详情
 
-![应用详情](/img/monitor/bytedesk-monitor-detail.png)
+![应用详情](images/bytedesk-monitor-detail.png)
 
 ### 事件日志
 
-![事件日志](/img/monitor/bytedesk-monitor-journal.png)
+![事件日志](images/bytedesk-monitor-journal.png)
 
-![事件logs](/img/monitor/bytedesk-monitor-logs.png)
+![事件logs](images/bytedesk-monitor-logs.png)
 
 ## 定时任务
 
-![定时任务](/img/monitor/bytedesk-monitor-quartz.png)
+![定时任务](images/bytedesk-monitor-quartz.png)
 
 ## 线程转储threaddump
 
-![线程转储](/img/monitor/bytedesk-monitor-threaddump.png)
+![线程转储](images/bytedesk-monitor-threaddump.png)
 
 ## 相关链接
 
