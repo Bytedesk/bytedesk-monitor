@@ -45,6 +45,7 @@ bytedesk-monitor is a dedicated monitoring dashboard built on **Spring Boot Admi
 
 ```bash
 cd bytedesk-monitor
+./mvnw install -Dmaven.test.skip=true
 ./mvnw spring-boot:run
 ```
 
@@ -54,7 +55,7 @@ The bytedesk starter already includes `spring-boot-admin-starter-client` and is 
 
 ```bash
 cd bytedesk-3x
-JASYPT_ENCRYPTOR_PASSWORD=<your-password> ./starter/mvnw -f starter/pom.xml spring-boot:run
+./starter/mvnw -f starter/pom.xml spring-boot:run
 ```
 
 ### 3. Open the Dashboard

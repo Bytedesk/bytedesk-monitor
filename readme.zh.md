@@ -45,6 +45,7 @@ bytedesk-monitor 是一个独立的监控服务，提供统一的健康检查、
 
 ```bash
 cd bytedesk-monitor
+./mvnw install -Dmaven.test.skip=true
 ./mvnw spring-boot:run
 ```
 
@@ -54,7 +55,7 @@ bytedesk starter 已内置 `spring-boot-admin-starter-client` 并配置好自动
 
 ```bash
 cd bytedesk-3x
-JASYPT_ENCRYPTOR_PASSWORD=<your-password> ./starter/mvnw -f starter/pom.xml spring-boot:run
+./starter/mvnw -f starter/pom.xml spring-boot:run
 ```
 
 ### 3. 打开监控面板
