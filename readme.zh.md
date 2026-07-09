@@ -69,6 +69,24 @@ cd bytedesk-3x
 
 > ⚠️ **生产环境**：请通过环境变量 `SPRING_SECURITY_USER_NAME` / `SPRING_SECURITY_USER_PASSWORD` 覆盖默认凭据。
 
+## 构建打包
+
+将项目打包为可执行 JAR：
+
+```bash
+./mvnw clean package -Dmaven.test.skip=true
+```
+
+生成的 JAR 文件为 `target/bytedesk-monitor.jar`。运行方式：
+
+```bash
+# 前台运行
+java -jar target/bytedesk-monitor.jar
+
+# 后台运行（日志输出到 logs/app.log）
+nohup java -jar target/bytedesk-monitor.jar > logs/app.log 2>&1 &
+```
+
 ## 配置说明
 
 ### 服务端（`application.properties`）

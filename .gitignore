@@ -31,6 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+cicd/
+logs/
 
 # Local/production Spring profile overrides
 src/main/resources/application-local.properties

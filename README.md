@@ -69,6 +69,24 @@ Visit [http://127.0.0.1:9103](http://127.0.0.1:9103) in your browser.
 
 > ⚠️ **Production**: Override defaults via `SPRING_SECURITY_USER_NAME` / `SPRING_SECURITY_USER_PASSWORD` environment variables.
 
+## Build & Package
+
+Package the project into an executable JAR:
+
+```bash
+./mvnw clean package -Dmaven.test.skip=true
+```
+
+The output JAR is `target/bytedesk-monitor.jar`. Run it with:
+
+```bash
+# Foreground
+java -jar target/bytedesk-monitor.jar
+
+# Background (logs written to logs/app.log)
+nohup java -jar target/bytedesk-monitor.jar > logs/app.log 2>&1 &
+```
+
 ## Configuration
 
 ### Server (`application.properties`)

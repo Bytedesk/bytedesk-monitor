@@ -82,6 +82,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>bytedesk-monitor</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
