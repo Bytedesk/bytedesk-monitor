@@ -33,7 +33,7 @@ build/
 .vscode/
 cicd/
 logs/
-
+.DS_Store
 # Local/production Spring profile overrides
 src/main/resources/application-local.properties
 src/main/resources/application-prod.properties
