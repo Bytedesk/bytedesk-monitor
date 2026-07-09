@@ -148,5 +148,5 @@ spring.boot.admin.notify.mail.from=${SPRING_BOOT_ADMIN_NOTIFY_MAIL_FROM:Bytedesk
 
 ## 相关链接
 
-- [Spring Boot Admin 官方文档](https://docs.spring-boot-admin.com/current/getting-started.html)
+- [Spring Boot Admin 官方文档](http://docs.spring-boot-admin.com/3.5.9/docs/index/)
 - [Bytedesk 主项目](https://github.com/Bytedesk/bytedesk)
