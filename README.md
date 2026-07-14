@@ -87,6 +87,64 @@ java -jar target/bytedesk-monitor.jar
 nohup java -jar target/bytedesk-monitor.jar > logs/app.log 2>&1 &
 ```
 
+## Docker Usage
+
+### Pull Remote Image
+
+```bash
+# Docker Hub
+docker pull bytedesk/monitor:latest
+
+# Aliyun Registry (recommended for users in mainland China)
+docker pull registry.cn-hangzhou.aliyuncs.com/bytedesk/monitor:latest
+```
+
+### Run with Docker
+
+```bash
+docker run -d \
+    --name bytedesk-monitor \
+    -p 9103:9103 \
+    -e SPRING_SECURITY_USER_NAME=admin \
+    -e SPRING_SECURITY_USER_PASSWORD=admin \
+    -e TZ=Asia/Shanghai \
+    bytedesk/monitor:latest
+```
+
+Open `http://127.0.0.1:9103` after the container starts.
+
+If you prefer Aliyun image source, replace image with:
+
+```bash
+registry.cn-hangzhou.aliyuncs.com/bytedesk/monitor:latest
+```
+
+### Run with Docker Compose
+
+Create a `docker-compose.yml` in the project root:
+
+```yaml
+services:
+    bytedesk-monitor:
+        image: bytedesk/monitor:latest
+        container_name: bytedesk-monitor
+        ports:
+            - "9103:9103"
+        environment:
+            SPRING_SECURITY_USER_NAME: admin
+            SPRING_SECURITY_USER_PASSWORD: admin
+            TZ: Asia/Shanghai
+        restart: unless-stopped
+```
+
+Start and stop:
+
+```bash
+docker compose up -d
+docker compose logs -f
+docker compose down
+```
+
 ## Configuration
 
 ### Server (`application.properties`)

@@ -87,6 +87,64 @@ java -jar target/bytedesk-monitor.jar
 nohup java -jar target/bytedesk-monitor.jar > logs/app.log 2>&1 &
 ```
 
+## Docker 使用说明
+
+### 拉取远程镜像
+
+```bash
+# Docker Hub
+docker pull bytedesk/monitor:latest
+
+# 阿里云镜像仓库（中国大陆推荐）
+docker pull registry.cn-hangzhou.aliyuncs.com/bytedesk/monitor:latest
+```
+
+### 使用 Docker 运行
+
+```bash
+docker run -d \
+    --name bytedesk-monitor \
+    -p 9103:9103 \
+    -e SPRING_SECURITY_USER_NAME=admin \
+    -e SPRING_SECURITY_USER_PASSWORD=admin \
+    -e TZ=Asia/Shanghai \
+    bytedesk/monitor:latest
+```
+
+容器启动后访问 `http://127.0.0.1:9103`。
+
+如需使用阿里云镜像源，可将镜像名替换为：
+
+```bash
+registry.cn-hangzhou.aliyuncs.com/bytedesk/monitor:latest
+```
+
+### 使用 Docker Compose 运行
+
+在项目根目录创建 `docker-compose.yml`：
+
+```yaml
+services:
+    bytedesk-monitor:
+        image: bytedesk/monitor:latest
+        container_name: bytedesk-monitor
+        ports:
+            - "9103:9103"
+        environment:
+            SPRING_SECURITY_USER_NAME: admin
+            SPRING_SECURITY_USER_PASSWORD: admin
+            TZ: Asia/Shanghai
+        restart: unless-stopped
+```
+
+启动与停止命令：
+
+```bash
+docker compose up -d
+docker compose logs -f
+docker compose down
+```
+
 ## 配置说明
 
 ### 服务端（`application.properties`）
